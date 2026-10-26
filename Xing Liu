@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Xing Liu | Technical Project Manager</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      color: #17253b;
+      line-height: 1.7;
+    }
+    header {
+      background: #12243a;
+      color: white;
+      padding: 90px 10%;
+    }
+    h1 { font-size: 48px; margin-bottom: 5px; }
+    h2 { color: #16466f; }
+    .subtitle { color: #9ed7f5; font-size: 22px; }
+    section { max-width: 950px; margin: 50px auto; padding: 0 24px; }
+    .card { background: white; padding: 28px; border-radius: 14px; margin: 20px 0; }
+    footer { text-align: center; padding: 30px; color: #667; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Xing Liu</h1>
+    <p class="subtitle">Technical Project Manager</p>
+    <p>M.Sc. Electromobility | Mechanical Engineering</p>
+    <p>Battery Manufacturing · Commissioning · Project Management</p>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <div class="card">
+      <p>I am an engineering professional with a background
+      in mechanical engineering, electromobility and
+      international project management.</p>
+      <p>My experience covers industrial commissioning,
+      battery cell manufacturing, automation integration
+      and cross-functional stakeholder coordination.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Professional Experience</h2>
+    <div class="card">
+      <h3>Project Manager | Battery Manufacturing</h3>
+      <p>Yinghe Technology GmbH | Germany</p>
+      <p>Commissioning, production ramp-up, technical
+      coordination and automation interfaces.</p>
+    </div>
+    <div class="card">
+      <h3>Project Manager | Infrastructure</h3>
+      <p>Civil Aviation Telecom | China</p>
+      <p>International infrastructure projects,
+      supplier management and project execution.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Core Competencies</h2>
+    <div class="card">
+      Project Management · Stakeholder Management ·
+      Commissioning · MES/SCADA · PLC Interfaces ·
+      Battery Cell Production · Process Optimization
+    </div>
+  </section>
+
+  <footer>© 2026 Xing Liu</footer>
+</body>
+</html>
