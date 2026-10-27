@@ -475,6 +475,21 @@
         grid-template-columns: 1fr;
       }
     }
+        .contact-details {
+      margin: 20px 0;
+      font-size: 18px;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-details a {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .contact-details a:hover {
+      opacity: 0.75;
+    }
   </style>
 </head>
 
@@ -575,13 +590,32 @@
       <div class="language-grid" id="languagesContent"></div>
     </section>
 
-    <section id="contact">
-      <div class="panel contact-panel">
-        <h2 id="contactTitle"></h2>
-        <p id="contactContent"></p>
-        <p class="contact-note" id="contactNote"></p>
-      </div>
-    </section>
+   <section id="contact">
+  <div class="panel contact-panel">
+    <h2 id="contactTitle"></h2>
+    <p id="contactContent"></p>
+
+<div class="contact-details">
+  <!-- 邮箱：替换下面两处邮箱地址 -->
+  <p>
+    ✉️
+    <a href="mailto:liuxing251314@gmail.com">
+      liuxing251314@gmail.com
+    </a>
+  </p>
+
+  <!-- 电话：替换下面两处电话号码 -->
+  <p>
+    ☎
+    <a href="tel:+4915257560487">
+      +49 152 57560487
+    </a>
+  </p>
+</div>
+
+    <p class="contact-note" id="contactNote"></p>
+  </div>
+</section>
   </main>
 
   <footer id="footer"></footer>
