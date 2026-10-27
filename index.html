@@ -482,7 +482,7 @@
   <header id="top">
     <div class="container">
       <div class="topbar">
-        <a class="brand" href="#top">XL / XING LIU</a>
+        <a class="brand" href="#top" id="brandName">XL / XING LIU</a>
 
         <div
           class="language-switch"
@@ -500,7 +500,7 @@
       <div class="hero">
         <div class="eyebrow" id="eyebrow"></div>
 
-        <h1>Xing Liu</h1>
+        <h1 id="displayName">Xing Liu</h1>
 
         <p class="hero-role" id="role"></p>
         <p class="hero-tagline" id="tagline"></p>
@@ -1656,6 +1656,21 @@
           : "de";
 
       const text = content[selectedLanguage];
+      
+
+    // 中文界面显示中文姓名，德语和英语界面显示拼音。
+      const isChinese = selectedLanguage === "zh";
+
+    getElement("displayName").textContent =
+     isChinese ? "刘星" : "Xing Liu";
+
+     getElement("brandName").textContent =
+      isChinese ? "刘星 · 个人主页" : "XL / XING LIU";
+
+      document.documentElement.lang =
+      selectedLanguage === "zh" ? "zh-CN" : selectedLanguage;
+
+document.title = text.pageTitle;
 
       document.documentElement.lang =
         selectedLanguage === "zh" ? "zh-CN" : selectedLanguage;
