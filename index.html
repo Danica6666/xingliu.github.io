@@ -1,75 +1,1741 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Xing Liu | Technical Project Manager</title>
+
+  <title>Xing Liu | Technische Projektmanagerin</title>
+
+  <meta
+    name="description"
+    content="Xing Liu — Technical Project Manager. Battery manufacturing, commissioning, industrialization and international project management."
+  >
+
   <style>
+    :root {
+      --background: #f4f7fb;
+      --surface: #ffffff;
+      --text: #213047;
+      --muted: #65758b;
+      --blue: #286b9b;
+      --navy: #12243a;
+      --line: #dfe7f0;
+      --accent: #a5dcff;
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f7fa;
-      color: #17253b;
-      line-height: 1.7;
+      background: var(--background);
+      color: var(--text);
+      font-family:
+        -apple-system, BlinkMacSystemFont, "Segoe UI",
+        "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.75;
     }
+
+    a {
+      color: var(--blue);
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid #54b4ee;
+      outline-offset: 5px;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 48px));
+      margin-inline: auto;
+    }
+
     header {
-      background: #12243a;
+      background:
+        radial-gradient(
+          circle at 90% 10%,
+          rgba(65, 145, 200, 0.25),
+          transparent 45%
+        ),
+        linear-gradient(125deg, #101e31, #1d4263);
       color: white;
-      padding: 90px 10%;
     }
-    h1 { font-size: 48px; margin-bottom: 5px; }
-    h2 { color: #16466f; }
-    .subtitle { color: #9ed7f5; font-size: 22px; }
-    section { max-width: 950px; margin: 50px auto; padding: 0 24px; }
-    .card { background: white; padding: 28px; border-radius: 14px; margin: 20px 0; }
-    footer { text-align: center; padding: 30px; color: #667; }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding-block: 24px;
+    }
+
+    .brand {
+      color: white;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+    }
+
+    .language-switch {
+      display: flex;
+      gap: 6px;
+    }
+
+    .language-switch button {
+      min-height: 38px;
+      padding: 6px 13px;
+      border: 1px solid #6d859d;
+      border-radius: 7px;
+      background: transparent;
+      color: #e2edf7;
+      font: inherit;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .language-switch button.active {
+      background: white;
+      border-color: white;
+      color: var(--navy);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 24px;
+      padding-block: 12px;
+    }
+
+    nav a {
+      color: #d9e7f2;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: white;
+      text-decoration: underline;
+      text-underline-offset: 5px;
+    }
+
+    .hero {
+      padding: 65px 0 75px;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+    }
+
+    h1 {
+      margin: 16px 0 8px;
+      font-size: clamp(48px, 8vw, 82px);
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+    }
+
+    .hero-role {
+      margin: 12px 0;
+      color: var(--accent);
+      font-size: clamp(23px, 4vw, 34px);
+      font-weight: 500;
+      line-height: 1.35;
+    }
+
+    .hero-tagline {
+      margin-top: 20px;
+      font-weight: 600;
+    }
+
+    .hero-intro {
+      max-width: 850px;
+      color: #dce8f3;
+      font-size: 17px;
+    }
+
+    .hero-location {
+      margin-top: 24px;
+      color: #bed0e0;
+      font-size: 14px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 10px 18px;
+      border: 1px solid #7895ae;
+      border-radius: 8px;
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .button.primary {
+      background: white;
+      border-color: white;
+      color: var(--navy);
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+    }
+
+    main {
+      padding-bottom: 65px;
+    }
+
+    section {
+      padding-top: 55px;
+      scroll-margin-top: 25px;
+    }
+
+    .section-heading {
+      margin-bottom: 22px;
+    }
+
+    .section-heading h2 {
+      margin: 0 0 8px;
+      color: #183b5a;
+      font-size: clamp(25px, 4vw, 31px);
+      line-height: 1.35;
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .panel,
+    .experience-card,
+    .education-card {
+      padding: 27px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: 0 6px 24px rgba(20, 43, 70, 0.035);
+    }
+
+    .panel > :first-child {
+      margin-top: 0;
+    }
+
+    .panel > :last-child {
+      margin-bottom: 0;
+    }
+
+    .experience-list,
+    .education-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .experience-card,
+    .education-card {
+      border-left: 4px solid #4b91bd;
+    }
+
+    .date {
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    h3 {
+      margin: 7px 0 6px;
+      color: #204768;
+      font-size: 20px;
+      line-height: 1.4;
+    }
+
+    .organization {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    ul {
+      margin: 12px 0 0;
+      padding-left: 21px;
+    }
+
+    li {
+      margin-block: 8px;
+    }
+
+    li::marker {
+      color: #4b91bd;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .project-number {
+      display: block;
+      margin-bottom: 13px;
+      color: #528ab1;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    .project-card p {
+      color: var(--muted);
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .skill-tag {
+      padding: 5px 11px;
+      border-radius: 7px;
+      background: #edf4f9;
+      color: #315a78;
+      font-size: 13px;
+    }
+
+    .language-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .language-card strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #204768;
+      font-size: 19px;
+    }
+
+    .language-card span {
+      color: var(--muted);
+    }
+
+    .contact-panel {
+      background: var(--navy);
+      border-color: var(--navy);
+      color: #dce8f3;
+    }
+
+    .contact-panel h2 {
+      margin-top: 0;
+      color: white;
+      font-size: 28px;
+    }
+
+    .contact-note {
+      color: #a9c5dc;
+      font-size: 14px;
+    }
+
+    footer {
+      padding: 25px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    @media (max-width: 700px) {
+      .container {
+        width: calc(100% - 32px);
+      }
+
+      .topbar {
+        gap: 12px;
+      }
+
+      .brand {
+        font-size: 14px;
+      }
+
+      .language-switch button {
+        padding-inline: 10px;
+      }
+
+      nav {
+        gap: 10px 16px;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+
+      .hero {
+        padding-block: 42px 52px;
+      }
+
+      .hero-intro {
+        font-size: 16px;
+      }
+
+      .grid,
+      .language-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding-top: 38px;
+      }
+
+      .panel,
+      .experience-card,
+      .education-card {
+        padding: 21px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .button:hover {
+        transform: none;
+      }
+    }
+
+    @media print {
+      body {
+        background: white;
+        font-size: 11pt;
+      }
+
+      header,
+      .contact-panel {
+        background: white;
+        color: #213047;
+      }
+
+      .hero-role,
+      .hero-intro,
+      .hero-location,
+      .eyebrow,
+      .contact-panel h2,
+      .contact-note {
+        color: #213047;
+      }
+
+      .language-switch,
+      nav,
+      .hero-actions {
+        display: none;
+      }
+
+      .hero {
+        padding-block: 15px;
+      }
+
+      h1 {
+        font-size: 36pt;
+      }
+
+      section {
+        padding-top: 22px;
+      }
+
+      .panel,
+      .experience-card,
+      .education-card {
+        box-shadow: none;
+        break-inside: avoid;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <header>
-    <h1>Xing Liu</h1>
-    <p class="subtitle">Technical Project Manager</p>
-    <p>M.Sc. Electromobility | Mechanical Engineering</p>
-    <p>Battery Manufacturing · Commissioning · Project Management</p>
+  <header id="top">
+    <div class="container">
+      <div class="topbar">
+        <a class="brand" href="#top">XL / XING LIU</a>
+
+        <div
+          class="language-switch"
+          role="group"
+          aria-label="Language / Sprache / 语言"
+        >
+          <button type="button" data-lang="de">DE</button>
+          <button type="button" data-lang="en">EN</button>
+          <button type="button" data-lang="zh">中文</button>
+        </div>
+      </div>
+
+      <nav id="navigation" aria-label="Navigation"></nav>
+
+      <div class="hero">
+        <div class="eyebrow" id="eyebrow"></div>
+
+        <h1>Xing Liu</h1>
+
+        <p class="hero-role" id="role"></p>
+        <p class="hero-tagline" id="tagline"></p>
+        <p class="hero-intro" id="introduction"></p>
+        <p class="hero-location" id="location"></p>
+
+        <div class="hero-actions">
+          <a
+            class="button primary"
+            href="#experience"
+            id="experienceButton"
+          ></a>
+
+          <a
+            class="button"
+            href="#education"
+            id="educationButton"
+          ></a>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <section>
-    <h2>About Me</h2>
-    <div class="card">
-      <p>I am an engineering professional with a background
-      in mechanical engineering, electromobility and
-      international project management.</p>
-      <p>My experience covers industrial commissioning,
-      battery cell manufacturing, automation integration
-      and cross-functional stakeholder coordination.</p>
-    </div>
-  </section>
+  <main class="container">
+    <section id="about">
+      <div class="section-heading">
+        <h2 id="aboutTitle"></h2>
+      </div>
 
-  <section>
-    <h2>Professional Experience</h2>
-    <div class="card">
-      <h3>Project Manager | Battery Manufacturing</h3>
-      <p>Yinghe Technology GmbH | Germany</p>
-      <p>Commissioning, production ramp-up, technical
-      coordination and automation interfaces.</p>
-    </div>
-    <div class="card">
-      <h3>Project Manager | Infrastructure</h3>
-      <p>Civil Aviation Telecom | China</p>
-      <p>International infrastructure projects,
-      supplier management and project execution.</p>
-    </div>
-  </section>
+      <div class="panel" id="aboutContent"></div>
+    </section>
 
-  <section>
-    <h2>Core Competencies</h2>
-    <div class="card">
-      Project Management · Stakeholder Management ·
-      Commissioning · MES/SCADA · PLC Interfaces ·
-      Battery Cell Production · Process Optimization
-    </div>
-  </section>
+    <section id="experience">
+      <div class="section-heading">
+        <h2 id="experienceTitle"></h2>
+        <p id="experienceSubtitle"></p>
+      </div>
 
-  <footer>© 2026 Xing Liu</footer>
+      <div class="experience-list" id="experienceContent"></div>
+    </section>
+
+    <section id="projects">
+      <div class="section-heading">
+        <h2 id="projectsTitle"></h2>
+        <p id="projectsSubtitle"></p>
+      </div>
+
+      <div class="grid" id="projectsContent"></div>
+    </section>
+
+    <section id="education">
+      <div class="section-heading">
+        <h2 id="educationTitle"></h2>
+      </div>
+
+      <div class="education-list" id="educationContent"></div>
+    </section>
+
+    <section id="skills">
+      <div class="section-heading">
+        <h2 id="skillsTitle"></h2>
+      </div>
+
+      <div class="grid" id="skillsContent"></div>
+    </section>
+
+    <section id="languages">
+      <div class="section-heading">
+        <h2 id="languagesTitle"></h2>
+      </div>
+
+      <div class="language-grid" id="languagesContent"></div>
+    </section>
+
+    <section id="contact">
+      <div class="panel contact-panel">
+        <h2 id="contactTitle"></h2>
+        <p id="contactContent"></p>
+        <p class="contact-note" id="contactNote"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer"></footer>
+
+  <noscript>
+    <p style="padding: 24px;">
+      Bitte JavaScript aktivieren, um das Portfolio anzuzeigen.
+      Please enable JavaScript to view this portfolio.
+      请启用 JavaScript 查看完整页面。
+    </p>
+  </noscript>
+
+  <script>
+    /*
+     * 内容编辑：
+     * de = 德语，en = 英语，zh = 中文。
+     * 如需补充准确任职日期，修改相应工作经历的 date。
+     */
+
+    const content = {
+      de: {
+        pageTitle: "Xing Liu | Technische Projektmanagerin",
+
+        navigation: [
+          ["about", "Profil"],
+          ["experience", "Berufserfahrung"],
+          ["projects", "Projekte"],
+          ["education", "Ausbildung"],
+          ["skills", "Kompetenzen"],
+          ["contact", "Kontakt"]
+        ],
+
+        eyebrow: "ENGINEERING · INDUSTRIALISIERUNG · PROJEKTUMSETZUNG",
+        role: "Technische Projektmanagerin",
+        tagline: "Batteriezellfertigung · Inbetriebnahme · Projektmanagement",
+
+        introduction:
+          "Ich verbinde internationale Projektmanagementerfahrung mit " +
+          "praxisnaher Ingenieurarbeit. Mein Hintergrund umfasst die " +
+          "Batteriezellfertigung in Deutschland, große Flughafenprojekte " +
+          "in China sowie ein Masterstudium der Elektromobilität.",
+
+        location: "Salzgitter / Wolfenbüttel · Deutschland",
+        experienceButton: "Berufserfahrung entdecken ↓",
+        educationButton: "Ausbildung ansehen",
+
+        aboutTitle: "Berufliches Profil",
+
+        about: [
+          "Als Projektmanagerin koordiniere ich technische Teams, " +
+          "Lieferanten und Kunden und begleite Projekte von der Planung " +
+          "bis zur Inbetriebnahme und Übergabe.",
+
+          "Aktuell arbeite ich in der Elektrodenfertigung für Batteriezellen. " +
+          "Meine Schwerpunkte sind Anlageninbetriebnahme, Produktionshochlauf, " +
+          "technische Schnittstellen und die strukturierte Nachverfolgung " +
+          "von Problemen und Maßnahmen.",
+
+          "Zuvor sammelte ich rund vier Jahre Erfahrung im Management " +
+          "großer Flughafeninfrastrukturprojekte. Mein Studium in Maschinenbau " +
+          "und Elektromobilität hilft mir, technische Zusammenhänge zu " +
+          "verstehen und zwischen unterschiedlichen Fachbereichen zu vermitteln."
+        ],
+
+        experienceTitle: "Berufserfahrung",
+
+        experienceSubtitle:
+          "Projektmanagement, industrielle Inbetriebnahme, Automatisierung und Forschung.",
+
+        jobs: [
+          {
+            date: "24. November 2025 – heute",
+            title: "Projektmanagerin · Batteriezellfertigung",
+            organization: "Yinghe Technology GmbH · Salzgitter, Deutschland",
+
+            points: [
+              "Koordination der Inbetriebnahme und des Produktionshochlaufs " +
+              "von Anoden- und Kathodenbeschichtungsanlagen.",
+
+              "Abstimmung zwischen Kunden, Lieferanten und Teams aus Mechanik, " +
+              "Elektrik, SPS, Prozesstechnik und Produktion.",
+
+              "Koordination technischer Schnittstellen zwischen Beschichtungsanlage, " +
+              "Lösemittelrückgewinnung, Lüftung und Inline-Inspektion.",
+
+              "Abstimmung von SPS-Signalen und MES-/SCADA-Integrationstests, " +
+              "einschließlich Barcode-Erfassung, Rückverfolgbarkeit und Anlagenstatus.",
+
+              "Zusammenarbeit mit Lieferanten bei CCD-Breitenmessung, " +
+              "A/B-Versatz, Oberflächenfehlererkennung und Schnittstellen zur Dickenmessung.",
+
+              "Organisation von Erstprüfungen, Chargenversuchen, " +
+              "Schichtabstimmungen und Betriebsübergaben; Unterstützung bei Arbeitsanweisungen.",
+
+              "Koordination der Vorbereitung und Nachverfolgung von DGUV-Prüfungen " +
+              "und sicherheitsbezogenen Tests mit den zuständigen Fachkräften.",
+
+              "Pflege von Prioritäten- und Themenlisten sowie Kommunikation " +
+              "von Fortschritt, Risiken und offenen Maßnahmen."
+            ]
+          },
+
+          {
+            date: "Zuvor · ca. 4 Jahre",
+            title: "Projektmanagerin · Flughafeninfrastruktur",
+            organization: "Civil Aviation Telecom Co., Ltd. · Peking, China",
+
+            points: [
+              "Projektarbeit für die Flughäfen Beijing Daxing, " +
+              "Qingdao Jiaodong und Shanghai Pudong.",
+
+              "Projektkoordination von Ausschreibungen und technischen " +
+              "sowie kaufmännischen Angebotsvergleichen bis zu Beschaffung und Lieferantenverträgen.",
+
+              "Koordination von Installation, Inbetriebnahme und Abnahme " +
+              "sowie Unterstützung der Schlussabrechnung.",
+
+              "Abstimmung technischer Gewerke wie Radar, Flugbefeuerung, " +
+              "Funkkommunikation, meteorologische Anlagen und Energieverteilung.",
+
+              "Verfolgung von Terminen, Budgets, Meilensteinen und Projektrisiken; " +
+              "Berichte für Management und Lenkungsausschüsse.",
+
+              "Organisation von Testplanung, Prüfdokumentation und Abnahmen " +
+              "mit Kunden, Lieferanten und Baustellenteams.",
+
+              "Projektportfolio mit Gesamtbudgets über 276 Mio. € " +
+              "und Einzelprojekten über 80 Mio. €."
+            ]
+          },
+
+          {
+            date: "Praktikum",
+            title: "Praktikantin · Sonderfahrzeugbau",
+            organization: "Volkswagen Sachsen GmbH · Deutschland",
+
+            points: [
+              "Entwicklung von Excel-/VBA-Makros zur automatisierten Suche, " +
+              "Filterung und Bearbeitung komplexer Stücklisten.",
+
+              "Automatisierung wiederkehrender Dateneingaben zur Verringerung " +
+              "manueller Arbeit und möglicher Eingabefehler.",
+
+              "Dokumentation der Tools und Unterstützung bei der " +
+              "Optimierung interner Arbeitsabläufe."
+            ]
+          },
+
+          {
+            date: "Studienbegleitend",
+            title: "Studentische Hilfskraft · Adaptronik & Funktionsleichtbau",
+            organization: "Technische Universität Chemnitz · Deutschland",
+
+            points: [
+              "Modellierung und Simulation von Roboterarmen mit " +
+              "Denavit-Hartenberg-Parametern und inverser Kinematik " +
+              "in MATLAB / Robotics Toolbox.",
+
+              "Erstellung und Bearbeitung von Roboterarm-Baugruppen in Autodesk Inventor.",
+
+              "Entwicklung eines Prototyps zur Kamerafernsteuerung mit Node-RED und MQTT.",
+
+              "Temperatur- und Feuchteüberwachung mit Raspberry Pi, " +
+              "DHT11-Sensor und LED-Ansteuerung in Python."
+            ]
+          },
+
+          {
+            date: "Frühere Tätigkeit",
+            title: "Lagerplanerin",
+            organization: "Hong Tai GmbH · Deutschland",
+
+            points: [
+              "Koordination von Lagerplanung und Logistik zur Unterstützung des Materialflusses.",
+
+              "Identifikation von Engpässen und Mitwirkung an " +
+              "Ablaufverbesserungen zur Verkürzung von Durchlaufzeiten."
+            ]
+          }
+        ],
+
+        projectsTitle: "Ausgewählte Projekt- und Forschungsthemen",
+
+        projectsSubtitle:
+          "Technische Schwerpunkte aus beruflicher Praxis und Studium.",
+
+        projects: [
+          [
+            "Elektrodenbeschichtung & Produktionshochlauf",
+            "Koordination von Anlagenbereitschaft, Beschichtungsversuchen, " +
+            "Erstprüfungen und Übergabe. Abstimmung zwischen Mechanik, " +
+            "Elektrik, Prozesstechnik und Produktion."
+          ],
+          [
+            "Automatisierung & Rückverfolgbarkeit",
+            "Klärung von SPS-Signalen und Koordination von MES-/SCADA-Tests " +
+            "für Barcodes, Anlagenstatus und Materialrückverfolgbarkeit."
+          ],
+          [
+            "Inline-Inspektion",
+            "Zusammenarbeit mit Lieferanten und Prozessteams zu " +
+            "Elektrodenabmessungen, A/B-Versatz, Oberflächenfehlern " +
+            "und Schnittstellen zur Dickenmessung."
+          ],
+          [
+            "Flughafeninfrastruktur",
+            "Projekterfahrung an den Flughäfen Beijing Daxing, Qingdao Jiaodong " +
+            "und Shanghai Pudong – von Beschaffung und Installation bis zur Abnahme."
+          ],
+          [
+            "Masterarbeit · Messtechnik & Rauschreduzierung",
+            "Untersuchung von DMS-Messschaltungen mit Wheatstone-Brücke " +
+            "mittels FFT-Rauschanalyse und MATLAB-/Simscape-Modellierung " +
+            "sowie Optimierung von Filteransätzen."
+          ],
+          [
+            "Robotik & technische Prototypen",
+            "Automatischer zeichnender Roboterarm als Bachelorarbeit " +
+            "sowie weitere Arbeiten zu Roboterarmsimulation, " +
+            "Kamerafernsteuerung und IoT-Sensorüberwachung."
+          ]
+        ],
+
+        educationTitle: "Ausbildung",
+
+        education: [
+          {
+            title: "M.Sc. Elektromobilität",
+            organization: "Technische Universität Chemnitz · Deutschland",
+            detail: "Abschluss März 2025 · Gesamtnote: 2,5",
+
+            description:
+              "Masterarbeit: „Optimierungsmethode zur Rauschreduzierung " +
+              "für DMS-Messschaltung (Wheatstone-Brücke)“. " +
+              "Schwerpunkte: FFT-Analyse, MATLAB/Simscape und Filteroptimierung. " +
+              "Note der Masterarbeit: 2,7."
+          },
+          {
+            title: "Bachelor · Maschinenbau, Konstruktion, Fertigung & Automatisierung",
+            organization: "Beijing University of Technology Gengdan Institute · China",
+            detail: "Deutsche Äquivalenznote: 1,8",
+
+            description:
+              "Bachelorarbeit: „Automatischer zeichnender Roboterarm“. " +
+              "Schwerpunkte: CAD-ASYS-Erkennung, SPS-Steuerung und " +
+              "XYZ-Dreiachsbewegung. Note der Bachelorarbeit: 1,3 (deutsche Skala)."
+          },
+          {
+            title: "Weiteres Universitätsstudium · Maschinenbau",
+            organization: "Technische Universität Chemnitz · Deutschland",
+            detail: "Ca. 1,5 Jahre vor dem Wechsel zur Elektromobilität",
+
+            description:
+              "Maschinenbaustudium vor dem Wechsel zum Masterstudium Elektromobilität."
+          },
+          {
+            title: "Sprachvorbereitung Deutsch",
+            organization: "interDaF · Leipzig, Deutschland",
+            detail: "Sprachausbildung",
+
+            description:
+              "Deutschsprachige Vorbereitung auf Studium und berufliche Kommunikation."
+          }
+        ],
+
+        skillsTitle: "Fachliche Kompetenzen",
+
+        skills: [
+          [
+            "Projektmanagement",
+            "Termin- & Meilensteinplanung",
+            "Stakeholdermanagement",
+            "Lieferantenkoordination",
+            "Risiko- & Themenmanagement",
+            "Ausschreibung & Beschaffung",
+            "Vertragskoordination",
+            "Technisches Reporting",
+            "Tests & Abnahmen"
+          ],
+          [
+            "Batteriefertigung & Inbetriebnahme",
+            "Anoden- & Kathodenbeschichtung",
+            "Produktionshochlauf",
+            "Abwickeln / Aufwickeln",
+            "Schlitzdüsen- & Pumpenschnittstellen",
+            "Ofen & Lüftung",
+            "Lösemittelrückgewinnung",
+            "Schneiden / Vorschneiden",
+            "Arbeitsanweisungen & Erstprüfungen"
+          ],
+          [
+            "Automatisierungs- & Qualitätsschnittstellen",
+            "MES-/SCADA-Integrationstests",
+            "SPS-Signalkoordination",
+            "Kenntnisse Siemens S7 / TIA / WinCC",
+            "Barcode & Rückverfolgbarkeit",
+            "CCD-Inspektion",
+            "Inline-Dickenmessung",
+            "Koordination von DGUV-Prüfungen"
+          ],
+          [
+            "Engineering-Software & Prototypen",
+            "MATLAB / Simscape",
+            "Robotics Toolbox",
+            "Python",
+            "Excel / VBA",
+            "Autodesk Inventor",
+            "Creo",
+            "Node-RED / MQTT",
+            "Raspberry Pi"
+          ]
+        ],
+
+        languagesTitle: "Sprachen",
+
+        languages: [
+          ["Chinesisch", "Muttersprache"],
+          ["Deutsch", "C1"],
+          ["Englisch", "B2"]
+        ],
+
+        contactTitle: "Beruflicher Austausch",
+
+        contact:
+          "Meine Erfahrung verbindet technisches Projektmanagement mit " +
+          "Inbetriebnahme, Industrialisierung und Prozessverbesserung. " +
+          "Ich freue mich über den fachlichen Austausch in den Bereichen " +
+          "Batteriefertigung, Automotive und industrielle Automatisierung.",
+
+        contactNote:
+          "Deutschland · Führerschein Klasse B · Erste-Hilfe-Zertifikat",
+
+        footer: "© 2026 Xing Liu · Engineering & Projektmanagement"
+      },
+
+      en: {
+        pageTitle: "Xing Liu | Technical Project Manager",
+
+        navigation: [
+          ["about", "About"],
+          ["experience", "Experience"],
+          ["projects", "Projects"],
+          ["education", "Education"],
+          ["skills", "Skills"],
+          ["contact", "Contact"]
+        ],
+
+        eyebrow: "ENGINEERING · INDUSTRIALIZATION · PROJECT DELIVERY",
+        role: "Technical Project Manager",
+        tagline: "Battery Manufacturing · Commissioning · Project Management",
+
+        introduction:
+          "I combine international project management experience with " +
+          "hands-on engineering coordination. My background spans battery " +
+          "manufacturing in Germany, major airport infrastructure projects " +
+          "in China and a master’s degree in Electromobility.",
+
+        location: "Salzgitter / Wolfenbüttel · Germany",
+        experienceButton: "Explore my experience ↓",
+        educationButton: "View education",
+
+        aboutTitle: "Professional Profile",
+
+        about: [
+          "As a project manager, I connect technical teams, suppliers " +
+          "and customers to support project delivery from planning " +
+          "through commissioning and handover.",
+
+          "I currently work in battery electrode manufacturing, focusing " +
+          "on equipment commissioning, production ramp-up, technical " +
+          "interfaces and structured follow-up of issues and actions.",
+
+          "Previously, I gained approximately four years of experience " +
+          "managing major airport infrastructure projects. My education " +
+          "in mechanical engineering and electromobility helps me understand " +
+          "technical systems and coordinate across engineering disciplines."
+        ],
+
+        experienceTitle: "Professional Experience",
+
+        experienceSubtitle:
+          "Project management, industrial commissioning, automation and research.",
+
+        jobs: [
+          {
+            date: "24 November 2025 – Present",
+            title: "Project Manager · Battery Cell Manufacturing",
+            organization: "Yinghe Technology GmbH · Salzgitter, Germany",
+
+            points: [
+              "Coordinate commissioning and production ramp-up of " +
+              "anode and cathode electrode coating lines.",
+
+              "Align customers, suppliers and teams working in mechanical, " +
+              "electrical, PLC, process engineering and production functions.",
+
+              "Manage technical interfaces between coating equipment, " +
+              "solvent recovery, ventilation and inline inspection.",
+
+              "Coordinate PLC signal clarification and MES/SCADA integration " +
+              "tests, including barcode scanning, traceability and equipment status.",
+
+              "Work with suppliers on CCD width measurement, A/B-side " +
+              "alignment, surface-defect detection and thickness-measurement interfaces.",
+
+              "Organize first inspections, batch trials, shift coordination " +
+              "and operational handover; support SOP preparation.",
+
+              "Coordinate preparation and follow-up for DGUV electrical " +
+              "inspections and safety-related tests with the responsible specialists.",
+
+              "Maintain priority and issue lists; communicate progress, " +
+              "risks and outstanding actions."
+            ]
+          },
+
+          {
+            date: "Previously · Approx. 4 years",
+            title: "Project Manager · Airport Infrastructure",
+            organization: "Civil Aviation Telecom Co., Ltd. · Beijing, China",
+
+            points: [
+              "Worked on infrastructure projects for Beijing Daxing, " +
+              "Qingdao Jiaodong and Shanghai Pudong airports.",
+
+              "Coordinated tendering, technical and commercial bid " +
+              "comparison, procurement and supplier contracts.",
+
+              "Coordinated installation, commissioning and acceptance, " +
+              "and supported final accounts and project closeout.",
+
+              "Aligned technical packages including radar, airfield lighting, " +
+              "radio communications, meteorological equipment and power distribution.",
+
+              "Tracked schedules, budgets, milestones and risks; prepared " +
+              "reports for management and steering committees.",
+
+              "Organized test planning, execution documentation and " +
+              "acceptance with customers, suppliers and construction teams.",
+
+              "Project portfolio with aggregate budgets above €276 million " +
+              "and individual projects above €80 million."
+            ]
+          },
+
+          {
+            date: "Internship",
+            title: "Intern · Special Vehicle Manufacturing",
+            organization: "Volkswagen Sachsen GmbH · Germany",
+
+            points: [
+              "Developed Excel/VBA macros to automate searching, " +
+              "filtering and processing of complex parts lists.",
+
+              "Automated recurring data-entry tasks to reduce manual " +
+              "effort and the risk of input errors.",
+
+              "Documented tool operation and supported improvements " +
+              "to internal workflows."
+            ]
+          },
+
+          {
+            date: "During studies",
+            title: "Student Research Assistant · Adaptronics & Lightweight Structures",
+            organization: "Technische Universität Chemnitz · Germany",
+
+            points: [
+              "Modeled and simulated robotic arms using Denavit–Hartenberg " +
+              "parameters and inverse kinematics in MATLAB / Robotics Toolbox.",
+
+              "Created and worked with robotic-arm assemblies in Autodesk Inventor.",
+
+              "Developed a camera remote-control prototype using Node-RED and MQTT.",
+
+              "Implemented temperature and humidity monitoring using " +
+              "Raspberry Pi, a DHT11 sensor and Python-based LED control."
+            ]
+          },
+
+          {
+            date: "Earlier experience",
+            title: "Warehouse Planner",
+            organization: "Hong Tai GmbH · Germany",
+
+            points: [
+              "Coordinated warehouse planning and logistics activities " +
+              "to support material flow.",
+
+              "Identified operational bottlenecks and supported workflow " +
+              "improvements to shorten lead times."
+            ]
+          }
+        ],
+
+        projectsTitle: "Selected Project & Research Topics",
+
+        projectsSubtitle:
+          "Technical focus areas from professional experience and academic work.",
+
+        projects: [
+          [
+            "Electrode Coating & Production Ramp-up",
+            "Coordinate equipment readiness, coating trials, first " +
+            "inspections and handover. Connect mechanical, electrical, " +
+            "process and production teams during commissioning."
+          ],
+          [
+            "Automation & Traceability",
+            "Clarify PLC signals and coordinate MES/SCADA tests for " +
+            "barcode handling, equipment status and material traceability."
+          ],
+          [
+            "Inline Inspection",
+            "Work with suppliers and process teams on electrode dimensions, " +
+            "A/B alignment, surface defects and thickness-measurement interfaces."
+          ],
+          [
+            "Airport Infrastructure",
+            "Project experience across Beijing Daxing, Qingdao Jiaodong " +
+            "and Shanghai Pudong, covering procurement, installation and acceptance."
+          ],
+          [
+            "Master’s Thesis · Measurement & Noise Reduction",
+            "Investigated strain-gauge Wheatstone-bridge measurement " +
+            "circuits using FFT noise analysis and MATLAB/Simscape modeling, " +
+            "including filter optimization."
+          ],
+          [
+            "Robotics & Engineering Prototypes",
+            "Automatic drawing robotic arm for the bachelor’s thesis, " +
+            "followed by work on robotic-arm simulation, camera remote " +
+            "control and IoT sensor monitoring."
+          ]
+        ],
+
+        educationTitle: "Education",
+
+        education: [
+          {
+            title: "M.Sc. Electromobility",
+            organization: "Technische Universität Chemnitz · Germany",
+            detail: "Graduated March 2025 · Final grade: 2.5 (German scale)",
+
+            description:
+              "Master’s thesis: “Optimization method for noise reduction " +
+              "in strain-gauge measurement circuits (Wheatstone bridge).” " +
+              "Focus: FFT analysis, MATLAB/Simscape and filter optimization. " +
+              "Thesis grade: 2.7."
+          },
+          {
+            title: "Bachelor · Mechanical Design, Manufacturing & Automation",
+            organization: "Beijing University of Technology Gengdan Institute · China",
+            detail: "German-equivalent grade: 1.8",
+
+            description:
+              "Bachelor’s thesis: “Automatic drawing robotic arm.” " +
+              "Focus: CAD-ASYS recognition, PLC control and XYZ three-axis " +
+              "motion. Thesis grade: 1.3 (German scale)."
+          },
+          {
+            title: "Additional University Studies · Mechanical Engineering",
+            organization: "Technische Universität Chemnitz · Germany",
+            detail: "Approx. 1.5 years before changing to Electromobility",
+
+            description:
+              "Mechanical engineering studies preceding the master’s " +
+              "program in Electromobility."
+          },
+          {
+            title: "German Language Preparation",
+            organization: "interDaF · Leipzig, Germany",
+            detail: "Language education",
+
+            description:
+              "German-language preparation for university study " +
+              "and professional communication."
+          }
+        ],
+
+        skillsTitle: "Core Competencies",
+
+        skills: [
+          [
+            "Project Management",
+            "Scheduling & milestones",
+            "Stakeholder management",
+            "Supplier coordination",
+            "Risk & issue management",
+            "Tendering & procurement",
+            "Contract coordination",
+            "Technical reporting",
+            "Testing & acceptance"
+          ],
+          [
+            "Battery Manufacturing & Commissioning",
+            "Anode & cathode coating",
+            "Production ramp-up",
+            "Unwinding / rewinding",
+            "Slot-die & pump interfaces",
+            "Oven & ventilation",
+            "Solvent recovery",
+            "Slitting / pre-slitting",
+            "SOPs & first inspections"
+          ],
+          [
+            "Automation & Quality Interfaces",
+            "MES / SCADA integration tests",
+            "PLC signal coordination",
+            "Siemens S7 / TIA / WinCC familiarity",
+            "Barcode & traceability",
+            "CCD inspection",
+            "Inline thickness measurement",
+            "DGUV inspection coordination"
+          ],
+          [
+            "Engineering Software & Prototypes",
+            "MATLAB / Simscape",
+            "Robotics Toolbox",
+            "Python",
+            "Excel / VBA",
+            "Autodesk Inventor",
+            "Creo",
+            "Node-RED / MQTT",
+            "Raspberry Pi"
+          ]
+        ],
+
+        languagesTitle: "Languages",
+
+        languages: [
+          ["Chinese", "Native"],
+          ["German", "C1"],
+          ["English", "B2"]
+        ],
+
+        contactTitle: "Professional Connections",
+
+        contact:
+          "My experience connects technical project management with " +
+          "commissioning, industrialization and process improvement. " +
+          "I welcome professional conversations in battery manufacturing, " +
+          "automotive engineering and industrial automation.",
+
+        contactNote:
+          "Germany · Driving licence: Category B · First-aid certificate",
+
+        footer: "© 2026 Xing Liu · Engineering & Project Management"
+      },
+
+      zh: {
+        pageTitle: "Xing Liu 刘星 | 技术项目经理",
+
+        navigation: [
+          ["about", "个人简介"],
+          ["experience", "工作经历"],
+          ["projects", "项目与科研"],
+          ["education", "教育背景"],
+          ["skills", "专业技能"],
+          ["contact", "职业交流"]
+        ],
+
+        eyebrow: "工程技术 · 工业化 · 项目交付",
+        role: "技术项目经理",
+        tagline: "电池制造 · 设备调试 · 项目管理",
+
+        introduction:
+          "拥有国际项目管理与现场工程协调经验，职业经历涵盖德国电池制造、" +
+          "中国大型机场基础设施项目，以及德国电动汽车硕士阶段的工程研究。",
+
+        location: "德国 · 萨尔茨吉特 / 沃尔芬比特尔",
+        experienceButton: "了解我的工作经历 ↓",
+        educationButton: "查看教育背景",
+
+        aboutTitle: "个人简介",
+
+        about: [
+          "作为项目经理，我负责连接客户、供应商与跨专业技术团队，" +
+          "推动项目从规划、安装调试到验收及运行交接。",
+
+          "目前在德国电池电极制造领域工作，重点负责设备调试、生产爬坡、" +
+          "技术接口协调，以及问题和整改措施的持续跟踪。",
+
+          "此前拥有约四年的大型机场基础设施项目管理经验。" +
+          "机械工程与电动汽车专业背景，使我能够理解技术系统，" +
+          "并在机械、电气、自动化、工艺与生产团队之间推进沟通和协作。"
+        ],
+
+        experienceTitle: "工作经历",
+
+        experienceSubtitle:
+          "涵盖项目管理、工业设备调试、自动化及工程科研实践。",
+
+        jobs: [
+          {
+            date: "2025年11月24日至今",
+            title: "项目经理 · 电池制造",
+            organization: "Yinghe Technology GmbH · 德国萨尔茨吉特",
+
+            points: [
+              "协调正负极电极涂布产线的现场调试与生产爬坡。",
+
+              "推动客户、供应商与机械、电气、PLC、工艺及生产团队之间的协作。",
+
+              "协调涂布设备、溶剂回收、通风与在线检测系统之间的技术接口。",
+
+              "协调 PLC 信号确认与 MES/SCADA 集成测试，" +
+              "涉及条码扫描、物料追溯及设备状态信号。",
+
+              "与供应商协同推进 CCD 宽度检测、AB 面错位、" +
+              "表面缺陷检测及在线测厚接口工作。",
+
+              "组织首检、批次试产、班次衔接与运行交接，支持 SOP 编制。",
+
+              "协调 DGUV 电气检查及安全相关测试的准备和整改跟踪，" +
+              "与负责的专业人员推动措施落实。",
+
+              "维护优先级及问题清单，汇报项目进展、风险及待完成事项。"
+            ]
+          },
+
+          {
+            date: "此前 · 约4年",
+            title: "项目经理 · 机场基础设施",
+            organization: "Civil Aviation Telecom Co., Ltd. · 中国北京",
+
+            points: [
+              "参与北京大兴、青岛胶东及上海浦东机场相关基础设施项目。",
+
+              "工作覆盖招投标、技术与商务比价、采购及供应商合同协调。",
+
+              "协调现场安装、调试和验收，支持项目结算及收尾。",
+
+              "协调雷达、助航灯光、无线电通信、气象设备及供配电等专业系统。",
+
+              "跟踪进度、预算、里程碑与项目风险，" +
+              "编制管理层及项目委员会所需的进展报告。",
+
+              "组织测试计划、执行记录及验收文件，" +
+              "协调客户、供应商与现场施工团队。",
+
+              "参与项目组合总预算超过2.76亿欧元，单体项目规模超过8000万欧元。"
+            ]
+          },
+
+          {
+            date: "实习经历",
+            title: "实习生 · 特种车辆制造",
+            organization: "Volkswagen Sachsen GmbH · 德国",
+
+            points: [
+              "开发 Excel/VBA 宏，实现复杂零部件清单的自动搜索、筛选及处理。",
+
+              "自动化重复数据录入任务，减少人工工作量及录入错误风险。",
+
+              "编写工具使用说明，协助优化内部工作流程。"
+            ]
+          },
+
+          {
+            date: "在校期间",
+            title: "学生科研助理 · 自适应结构与功能轻量化",
+            organization: "德国开姆尼茨工业大学",
+
+            points: [
+              "采用 DH 参数与逆运动学方法，" +
+              "使用 MATLAB / Robotics Toolbox 开展机械臂建模及仿真。",
+
+              "使用 Autodesk Inventor 创建和处理机械臂装配模型。",
+
+              "基于 Node-RED 与 MQTT 通信开发摄像头远程控制原型。",
+
+              "使用 Python、Raspberry Pi 与 DHT11 传感器实现温湿度监测及 LED 控制。"
+            ]
+          },
+
+          {
+            date: "早期经历",
+            title: "仓储规划员",
+            organization: "Hong Tai GmbH · 德国",
+
+            points: [
+              "协调仓储规划及物流工作，支持物料顺畅流转。",
+
+              "识别运行瓶颈并参与流程改进，缩短周转时间。"
+            ]
+          }
+        ],
+
+        projectsTitle: "项目与科研主题",
+
+        projectsSubtitle: "来自职业实践与大学研究的主要技术方向。",
+
+        projects: [
+          [
+            "电极涂布与生产爬坡",
+            "围绕设备就绪、涂布试产、首检及交接开展现场协调，" +
+            "连接机械、电气、工艺与生产团队，推进调试阶段问题解决。"
+          ],
+          [
+            "自动化与物料追溯",
+            "协调 PLC 信号确认及 MES/SCADA 集成测试，" +
+            "涉及条码处理、设备状态与物料追溯。"
+          ],
+          [
+            "在线检测",
+            "与供应商及工艺团队协同推进电极尺寸、AB 面错位、" +
+            "表面缺陷检测，以及在线测厚接口工作。"
+          ],
+          [
+            "机场基础设施",
+            "北京大兴、青岛胶东及上海浦东机场项目经验，" +
+            "覆盖采购、安装、专业系统协调与验收。"
+          ],
+          [
+            "硕士论文 · 测量与降噪",
+            "针对应变片惠斯通电桥测量电路，开展 FFT 噪声分析、" +
+            "MATLAB/Simscape 建模与滤波优化研究。"
+          ],
+          [
+            "机器人与工程原型",
+            "本科毕业设计为自动绘图机械臂；" +
+            "后续实践包含机械臂仿真、摄像头远程控制及物联网传感器监测。"
+          ]
+        ],
+
+        educationTitle: "教育背景",
+
+        education: [
+          {
+            title: "电动汽车硕士 · M.Sc. Elektromobilität",
+            organization: "德国开姆尼茨工业大学",
+            detail: "2025年3月毕业 · 德国成绩：2.5",
+
+            description:
+              "硕士论文：《应变片测量电路（惠斯通电桥）的降噪优化方法》。" +
+              "研究内容包括 FFT 频域分析、MATLAB/Simscape 建模与滤波优化。" +
+              "论文成绩：2.7。"
+          },
+          {
+            title: "机械设计制造及其自动化 · 本科",
+            organization: "北京工业大学耿丹学院 · 中国",
+            detail: "德国换算成绩：1.8",
+
+            description:
+              "本科毕业设计：《自动绘图机械臂》。" +
+              "涉及 CAD-ASYS 识别、PLC 控制及 XYZ 三轴运动。" +
+              "论文成绩：德国换算 1.3。"
+          },
+          {
+            title: "其他大学学习经历 · 机械工程",
+            organization: "德国开姆尼茨工业大学",
+            detail: "约1.5年，之后转入电动汽车专业",
+
+            description: "攻读电动汽车硕士之前的机械工程学习经历。"
+          },
+          {
+            title: "德语语言学习",
+            organization: "interDaF · 德国莱比锡",
+            detail: "语言教育",
+
+            description: "为德国大学学习与职业交流进行德语语言准备。"
+          }
+        ],
+
+        skillsTitle: "专业技能",
+
+        skills: [
+          [
+            "项目管理",
+            "进度与里程碑管理",
+            "利益相关方管理",
+            "供应商协调",
+            "风险与问题管理",
+            "招投标与采购",
+            "合同协调",
+            "技术报告",
+            "测试与验收"
+          ],
+          [
+            "电池制造与设备调试",
+            "正负极涂布",
+            "生产爬坡",
+            "放卷与收卷",
+            "狭缝模头与泵接口",
+            "烘箱与通风",
+            "溶剂回收",
+            "分切与预分切",
+            "SOP 与首检"
+          ],
+          [
+            "自动化与质量接口",
+            "MES/SCADA 集成测试",
+            "PLC 信号协调",
+            "Siemens S7 / TIA / WinCC 基础知识",
+            "条码与物料追溯",
+            "CCD 视觉检测",
+            "在线测厚",
+            "DGUV 检查协调"
+          ],
+          [
+            "工程软件与原型开发",
+            "MATLAB / Simscape",
+            "Robotics Toolbox",
+            "Python",
+            "Excel / VBA",
+            "Autodesk Inventor",
+            "Creo",
+            "Node-RED / MQTT",
+            "Raspberry Pi"
+          ]
+        ],
+
+        languagesTitle: "语言能力",
+
+        languages: [
+          ["中文", "母语"],
+          ["德语", "C1"],
+          ["英语", "B2"]
+        ],
+
+        contactTitle: "职业交流",
+
+        contact:
+          "我的经验结合了技术项目管理、设备调试、工业化与流程优化。" +
+          "欢迎围绕电池制造、汽车工业及工业自动化领域进行职业交流。",
+
+        contactNote: "德国 · B 类驾驶执照 · 急救证书",
+
+        footer: "© 2026 Xing Liu · 工程技术与项目管理"
+      }
+    };
+
+    const getElement = (id) => document.getElementById(id);
+
+    function createElement(tag, className, text) {
+      const element = document.createElement(tag);
+
+      if (className) {
+        element.className = className;
+      }
+
+      if (text !== undefined) {
+        element.textContent = text;
+      }
+
+      return element;
+    }
+
+    function renderNavigation(items) {
+      const navigation = getElement("navigation");
+      navigation.replaceChildren();
+
+      items.forEach(([target, label]) => {
+        const link = createElement("a", "", label);
+        link.href = "#" + target;
+        navigation.appendChild(link);
+      });
+    }
+
+    function renderAbout(paragraphs) {
+      const container = getElement("aboutContent");
+      container.replaceChildren();
+
+      paragraphs.forEach((text) => {
+        container.appendChild(createElement("p", "", text));
+      });
+    }
+
+    function renderExperience(jobs) {
+      const container = getElement("experienceContent");
+      container.replaceChildren();
+
+      jobs.forEach((job) => {
+        const article = createElement("article", "experience-card");
+
+        article.append(
+          createElement("div", "date", job.date),
+          createElement("h3", "", job.title),
+          createElement("p", "organization", job.organization)
+        );
+
+        const list = createElement("ul");
+
+        job.points.forEach((point) => {
+          list.appendChild(createElement("li", "", point));
+        });
+
+        article.appendChild(list);
+        container.appendChild(article);
+      });
+    }
+
+    function renderProjects(projects) {
+      const container = getElement("projectsContent");
+      container.replaceChildren();
+
+      projects.forEach(([title, description], index) => {
+        const article = createElement("article", "panel project-card");
+
+        article.append(
+          createElement(
+            "span",
+            "project-number",
+            String(index + 1).padStart(2, "0")
+          ),
+          createElement("h3", "", title),
+          createElement("p", "", description)
+        );
+
+        container.appendChild(article);
+      });
+    }
+
+    function renderEducation(entries) {
+      const container = getElement("educationContent");
+      container.replaceChildren();
+
+      entries.forEach((entry) => {
+        const article = createElement("article", "education-card");
+
+        article.append(
+          createElement("h3", "", entry.title),
+          createElement("p", "organization", entry.organization),
+          createElement("div", "date", entry.detail),
+          createElement("p", "", entry.description)
+        );
+
+        container.appendChild(article);
+      });
+    }
+
+    function renderSkills(groups) {
+      const container = getElement("skillsContent");
+      container.replaceChildren();
+
+      groups.forEach(([title, ...skills]) => {
+        const article = createElement("article", "panel");
+        const tags = createElement("div", "skill-tags");
+
+        article.appendChild(createElement("h3", "", title));
+
+        skills.forEach((skill) => {
+          tags.appendChild(createElement("span", "skill-tag", skill));
+        });
+
+        article.appendChild(tags);
+        container.appendChild(article);
+      });
+    }
+
+    function renderLanguages(languages) {
+      const container = getElement("languagesContent");
+      container.replaceChildren();
+
+      languages.forEach(([language, level]) => {
+        const article = createElement("div", "panel language-card");
+
+        article.append(
+          createElement("strong", "", language),
+          createElement("span", "", level)
+        );
+
+        container.appendChild(article);
+      });
+    }
+
+    function setLanguage(language) {
+      const selectedLanguage =
+        Object.prototype.hasOwnProperty.call(content, language)
+          ? language
+          : "de";
+
+      const text = content[selectedLanguage];
+
+      document.documentElement.lang =
+        selectedLanguage === "zh" ? "zh-CN" : selectedLanguage;
+
+      document.title = text.pageTitle;
+
+      document
+        .querySelector('meta[name="description"]')
+        .setAttribute("content", text.introduction);
+
+      const textFields = {
+        eyebrow: text.eyebrow,
+        role: text.role,
+        tagline: text.tagline,
+        introduction: text.introduction,
+        location: text.location,
+        experienceButton: text.experienceButton,
+        educationButton: text.educationButton,
+        aboutTitle: text.aboutTitle,
+        experienceTitle: text.experienceTitle,
+        experienceSubtitle: text.experienceSubtitle,
+        projectsTitle: text.projectsTitle,
+        projectsSubtitle: text.projectsSubtitle,
+        educationTitle: text.educationTitle,
+        skillsTitle: text.skillsTitle,
+        languagesTitle: text.languagesTitle,
+        contactTitle: text.contactTitle,
+        contactContent: text.contact,
+        contactNote: text.contactNote,
+        footer: text.footer
+      };
+
+      Object.entries(textFields).forEach(([id, value]) => {
+        getElement(id).textContent = value;
+      });
+
+      renderNavigation(text.navigation);
+      renderAbout(text.about);
+      renderExperience(text.jobs);
+      renderProjects(text.projects);
+      renderEducation(text.education);
+      renderSkills(text.skills);
+      renderLanguages(text.languages);
+
+      document.querySelectorAll("[data-lang]").forEach((button) => {
+        const active = button.dataset.lang === selectedLanguage;
+
+        button.classList.toggle("active", active);
+        button.setAttribute("aria-pressed", String(active));
+      });
+
+      try {
+        localStorage.setItem("xing-liu-language", selectedLanguage);
+      } catch (error) {
+        // The page also works when browser storage is unavailable.
+      }
+    }
+
+    document.querySelectorAll("[data-lang]").forEach((button) => {
+      button.addEventListener("click", () => {
+        setLanguage(button.dataset.lang);
+      });
+    });
+
+    let initialLanguage = "de";
+
+    try {
+      const savedLanguage = localStorage.getItem("xing-liu-language");
+
+      if (
+        savedLanguage &&
+        Object.prototype.hasOwnProperty.call(content, savedLanguage)
+      ) {
+        initialLanguage = savedLanguage;
+      }
+    } catch (error) {
+      // Use German as the default language.
+    }
+
+    setLanguage(initialLanguage);
+  </script>
 </body>
 </html>
